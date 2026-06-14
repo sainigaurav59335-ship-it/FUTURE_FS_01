@@ -188,6 +188,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     return res.status(400).json({ error: 'Message must be at least 10 characters long' });
   }
 
+
   const msgData = { name, email, subject, message };
 
   try {
@@ -205,56 +206,18 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       await saveMessageToLocalFile(msgData);
     }
 
-    // 3. Dispatch Email notification
-    const transporter = await getMailTransporter();
-    const isEthereal = transporter.options.host === 'smtp.ethereal.email';
-    const recipient = process.env.CONTACT_RECEIVER_EMAIL || 'portfolio-owner@example.com';
+    // Skip Email notification (Temporary Fix)
+    console.log("Contact form submitted successfully");
 
-    const mailOptions = {
-      from: `"Portfolio Form" <${transporter.options.auth.user}>`,
-      to: recipient,
-      subject: `New Portfolio Message: ${subject}`,
-      text: `You have received a new contact form message from your portfolio website.
-      
-Name: ${name}
-Email: ${email}
-Subject: ${subject}
-Message:
-${message}
-      `,
-      html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
-          <h2 style="color: #6366f1; border-bottom: 2px solid #6366f1; padding-bottom: 8px; margin-top: 0;">New Contact Form Message</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <div style="background: #f9f9f9; border-left: 4px solid #8b5cf6; padding: 12px; margin-top: 16px; font-style: italic;">
-            ${message.replace(/\n/g, '<br/>')}
-          </div>
-          <p style="font-size: 0.8em; color: #777; margin-top: 24px; border-top: 1px solid #eee; padding-top: 8px;">
-            Submitted from Personal Portfolio Contact Form on ${new Date().toLocaleString()}
-          </p>
-        </div>
-      `,
-    };
+    return res.status(200).json({
+      message: "Message received successfully!"
+    });
 
-    const info = await transporter.sendMail(mailOptions);
-    console.log(`Notification email sent: ${info.messageId}`);
-
-    if (isEthereal) {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
-      console.log(`[ETHEREAL MAILBOX PREVIEW]: ${previewUrl}`);
-      return res.status(200).json({
-        message: 'Message received! Simulated email verification link displayed in server logs.',
-        emailPreview: previewUrl
-      });
-    }
-
-    return res.status(200).json({ message: 'Message sent and database updated successfully!' });
-
-  } catch (err) {
+  }catch (err) {
     console.error('Contact processing failure:', err);
-    return res.status(500).json({ error: 'Server error processing contact request.' });
+    return res.status(500).json({
+      error: 'Server error processing contact request.'
+    });
   }
 });
 
@@ -262,3 +225,4 @@ ${message}
 app.listen(PORT, () => {
   console.log(`Backend Server running on port: ${PORT}`);
 });
+
