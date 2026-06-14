@@ -23,7 +23,9 @@ const DB_FILE_PATH = path.join(__dirname, 'messages_db.json');
 // Middlewares
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: ['http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'https://future-fs-01-3684.vercel.app'],
   credentials: true
 }));
 
