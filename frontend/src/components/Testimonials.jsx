@@ -7,7 +7,7 @@ export default function Testimonials() {
       id: 1,
       name: 'Sarah Jenkins',
       role: 'Director of Product at TechNova',
-      text: 'Alex is a rare breed of developer who understands both back-end optimization and detailed user experience. The Next.js migration was completed ahead of schedule, drastically improving our SEO rankings.',
+      text: 'Gaurav is a rare breed of developer who understands both back-end optimization and detailed user experience. The Next.js migration was completed ahead of schedule, drastically improving our SEO rankings.',
       rating: 5,
       initials: 'SJ'
     },
@@ -15,7 +15,7 @@ export default function Testimonials() {
       id: 2,
       name: 'David Chen',
       role: 'Founder at ByteSpeed Startup',
-      text: 'Our app load speeds dropped from 4.2 seconds to 1.1 seconds after Alex refactored our component trees and database queries. A highly professional engineer who delivers clean, production-ready code.',
+      text: 'Our app load speeds dropped from 4.2 seconds to 1.1 seconds after Gaurav refactored our component trees and database queries. A highly professional engineer who delivers clean, production-ready code.',
       rating: 5,
       initials: 'DC'
     },
@@ -23,7 +23,7 @@ export default function Testimonials() {
       id: 3,
       name: 'Elena Rostova',
       role: 'Principal UX Designer at AppGrid',
-      text: 'Working with Alex is a dream for any designer. They respect layout grids, execute perfect animations, and proactively suggest micro-interactions that make the product feel extremely premium.',
+      text: 'Working with Gaurav is a dream for any designer. They respect layout grids, execute perfect animations, and proactively suggest micro-interactions that make the product feel extremely premium.',
       rating: 5,
       initials: 'ER'
     }

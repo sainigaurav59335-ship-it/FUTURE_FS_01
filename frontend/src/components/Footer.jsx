@@ -102,7 +102,7 @@ export default function Footer() {
             letterSpacing: '-0.5px'
           }}
         >
-          AM.DEV
+          GS.DEV
         </div>
 
         {/* Navigation Quick Links */}
@@ -196,7 +196,7 @@ export default function Footer() {
           }}
         >
           <div>
-            © {new Date().getFullYear()} Alex Morgan. All rights reserved.
+            © {new Date().getFullYear()} Gaurav Saini. All rights reserved.
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', justifyContent: 'center' }}>
             Built with React & Node.js <Heart size={12} fill="red" color="red" />

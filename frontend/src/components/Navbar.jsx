@@ -122,7 +122,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             letterSpacing: '-0.5px'
           }}
         >
-          AM.DEV
+          GS.DEV
         </div>
 
         {/* Desktop Nav Items */}

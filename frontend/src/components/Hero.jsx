@@ -131,7 +131,7 @@ export default function Hero() {
                 background: 'linear-gradient(135deg, hsl(var(--color-primary-hsl)), hsl(var(--color-secondary-hsl)))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>Alex Morgan</span>
+              }}>Gaurav Saini</span>
               <br />
               <span className="typing-wrapper" style={{ fontSize: '0.85em', fontWeight: 600 }}>
                 a <span style={{ color: 'hsl(var(--color-secondary-hsl))', marginLeft: '8px' }}>{currentText}</span>
@@ -168,7 +168,7 @@ export default function Hero() {
 
               <a 
                 href="/resume-mock.pdf" 
-                download="Alex_Morgan_Resume.pdf"
+                download="Gaurav_Saini_Resume.pdf"
                 className="btn btn-secondary"
                 onClick={(e) => {
                   // Fallback: If resume pdf doesn't exist, open a print-friendly view or notify

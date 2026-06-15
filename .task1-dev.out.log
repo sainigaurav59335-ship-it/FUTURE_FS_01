@@ -1,0 +1,4 @@
+
+> portfolio-root@1.0.0 dev
+> npx concurrently "npm run frontend" "npm run backend"
+
