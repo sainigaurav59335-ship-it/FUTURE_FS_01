@@ -6,29 +6,9 @@ export default function Timeline() {
 
   const experienceData = [
     {
-      role: 'Lead Full-Stack Engineer',
-      company: 'TechNova Solutions',
-      period: '2023 - Present',
-      bullets: [
-        'Orchestrated migration of consumer platforms to React/Next.js, reducing average page-load times by 35%.',
-        'Directly managed 5 frontend and backend developers to ship feature scopes on time.',
-        'Engineered secure microservice communication routes, saving 15% in AWS cloud budget overhead.'
-      ]
-    },
-    {
-      role: 'Senior Software Engineer',
-      company: 'AppGrid Ventures',
-      period: '2021 - 2023',
-      bullets: [
-        'Refactored legacy REST APIs to robust GraphQL schemas, minimizing frontend over-fetching issues.',
-        'Designed custom state-management architecture that saved 40% loading lag in critical admin dashboard panels.',
-        'Mentored junior developers on accessibility guidelines (WCAG) and write modular, self-testing components.'
-      ]
-    },
-    {
       role: 'Full-Stack Web Developer',
       company: 'Launchpad Agency',
-      period: '2019 - 2021',
+      period: '2024 - 2025',
       bullets: [
         'Successfully launched 12 bespoke SaaS landing pages and interactive client products.',
         'Configured automated CI/CD pipelines via Github Actions, reducing deployment errors by 80%.',

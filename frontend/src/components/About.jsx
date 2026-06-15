@@ -21,8 +21,8 @@ export default function About() {
   ];
 
   const infoItems = [
-    { label: 'Role', value: 'Senior Full-Stack Engineer' },
-    { label: 'Location', value: 'San Francisco, CA (Open to Remote)' },
+    { label: 'Role', value: 'Full Stack Engineer' },
+    { label: 'Location', value: 'India, Gurugram (Open to Remote)' },
     { label: 'Primary Stack', value: 'React, Node.js, Express, MongoDB' },
     { label: 'Interests', value: 'Generative AI, Web3D, Tech Writing, Chess' }
   ];

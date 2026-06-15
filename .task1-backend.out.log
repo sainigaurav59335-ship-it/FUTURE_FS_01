@@ -1,0 +1,4 @@
+No MONGODB_URI found in env. Checking MySQL configurations.
+No MYSQL_HOST found in env.
+Using local JSON file database fallback.
+Backend Server running on port: 5000

@@ -23,7 +23,7 @@ const TwitterIcon = (props) => (
 );
 
 export default function Hero() {
-  const words = ['Full-Stack Engineer', 'UI/UX Enthusiast', 'Cloud Architect', 'Tech Innovator'];
+  const words = ['Full Stack Engineer', 'UI/UX Enthusiast', 'Cloud Architect', 'Tech Innovator'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);

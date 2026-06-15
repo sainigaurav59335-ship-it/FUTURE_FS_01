@@ -129,7 +129,7 @@ export default function Contact() {
               {[
                 { icon: <Mail size={20} />, label: 'Email', value: 'alex@morgan.dev', link: 'mailto:alex@morgan.dev' },
                 { icon: <Phone size={20} />, label: 'Phone', value: '+1 (415) 555-0199', link: 'tel:+14155550199' },
-                { icon: <MapPin size={20} />, label: 'Location', value: 'San Francisco, CA', link: null }
+                { icon: <MapPin size={20} />, label: 'Location', value: 'India, Gurugram (Open to Remote)', link: null }
               ].map((item, idx) => (
                 <div 
                   key={idx}
