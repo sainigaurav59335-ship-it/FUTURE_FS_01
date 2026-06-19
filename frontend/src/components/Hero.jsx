@@ -16,14 +16,8 @@ const LinkedinIcon = (props) => (
   </svg>
 );
 
-const TwitterIcon = (props) => (
-  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-  </svg>
-);
-
 export default function Hero() {
-  const words = ['Full Stack Engineer', 'UI/UX Enthusiast', 'Cloud Architect', 'Tech Innovator'];
+  const words = ['Full Stack Developer', 'React.js Developer', 'Cloud Enthusiast', 'Tech Innovator'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -165,18 +159,6 @@ export default function Hero() {
               >
                 View My Work <ArrowRight size={18} />
               </button>
-
-              <a 
-                href="/resume-mock.pdf" 
-                download="Gaurav_Saini_Resume.pdf"
-                className="btn btn-secondary"
-                onClick={(e) => {
-                  // Fallback: If resume pdf doesn't exist, open a print-friendly view or notify
-                  console.log("Downloading resume...");
-                }}
-              >
-                Download CV <Download size={18} />
-              </a>
             </div>
 
             {/* Social Grid */}
@@ -186,9 +168,8 @@ export default function Hero() {
               </span>
               <div style={{ display: 'flex', gap: '12px' }}>
                 {[
-                  { icon: <GithubIcon />, url: 'https://github.56789.xyz' },
-                  { icon: <LinkedinIcon />, url: 'https://linkedin.56789.xyz' },
-                  { icon: <TwitterIcon />, url: 'https://twitter.56789.xyz' },
+                  { icon: <GithubIcon />, url: 'https://github.com/sainigaurav59335-ship-it' },
+                  { icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/gaurav-saini-2278bb336/' },
                 ].map((item, idx) => (
                   <a
                     key={idx}
@@ -250,57 +231,38 @@ export default function Hero() {
                 animation: 'float 6s ease-in-out infinite'
               }}
             >
-              {/* Profile image placeholder */}
+              {/* Profile Avatar Glow */}
               <div 
                 style={{
                   width: '100%',
-                  aspectRatio: '1',
-                  borderRadius: '16px',
-                  background: 'linear-gradient(135deg, hsla(var(--color-primary-hsl), 0.1) 0%, hsla(var(--color-secondary-hsl), 0.2) 100%)',
-                  border: '1px solid var(--border-color)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginBottom: '20px',
-                  position: 'relative',
-                  overflow: 'hidden'
+                  marginBottom: '30px',
+                  position: 'relative'
                 }}
               >
-                <div 
+                <img 
+                  src="/profile.png"
+                  alt="Gaurav Saini"
                   style={{
-                    position: 'absolute',
                     width: '120px',
                     height: '120px',
                     borderRadius: '50%',
-                    background: 'linear-gradient(135deg, hsl(var(--color-primary-hsl)), hsl(var(--color-secondary-hsl)))',
-                    filter: 'blur(20px)',
-                    opacity: 0.6
+                    objectFit: 'cover',
+                    boxShadow: '0 0 30px hsla(var(--color-primary-hsl), 0.5), 0 0 60px hsla(var(--color-primary-hsl), 0.2)',
+                    border: '3px solid hsl(var(--color-primary-hsl))'
                   }}
                 />
-                
-                {/* SVG Avatar representing an engineer */}
-                <svg 
-                  width="120" 
-                  height="120" 
-                  viewBox="0 0 120 120" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{ position: 'relative', zIndex: 5 }}
-                >
-                  <circle cx="60" cy="45" r="22" stroke="white" strokeWidth="4" strokeLinecap="round" />
-                  <path d="M26 95C26 78.4315 39.4315 65 56 65H64C80.5685 65 94 78.4315 94 95V102H26V95Z" stroke="white" strokeWidth="4" strokeLinejoin="round" />
-                  <path d="M40 40H48" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-                  <path d="M72 40H80" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-                </svg>
               </div>
 
               {/* Stat Rows */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                 {[
-                  { value: '5+', label: 'Years Exp' },
-                  { value: '45+', label: 'Projects Completed' },
-                  { value: '15+', label: 'Global Clients' },
-                  { value: '99%', label: 'Success Rate' }
+                  { value: '2+', label: 'Projects Completed' },
+                  { value: '2+', label: 'Certifications' },
+                  { value: '10+', label: 'GitHub Contributions' },
+                  { value: '300+', label: 'Problems Solved' }
                 ].map((stat, idx) => (
                   <div 
                     key={idx}
@@ -316,7 +278,7 @@ export default function Hero() {
                     onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
                   >
                     <div style={{ 
-                      fontSize: '1.6rem', 
+                      fontSize: '1.4rem', 
                       fontWeight: 800, 
                       color: 'var(--text-main)',
                       fontFamily: 'var(--font-heading)',

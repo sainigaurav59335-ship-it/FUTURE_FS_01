@@ -4,32 +4,28 @@ import { Award, ExternalLink, ShieldCheck } from 'lucide-react';
 export default function Certifications() {
   const certifications = [
     {
-      title: 'AWS Certified Solutions Architect - Associate',
-      issuer: 'Amazon Web Services (AWS)',
-      date: 'Issued Dec 2024',
-      id: 'AWS-ASA-99812',
-      verifyUrl: 'https://aws.amazon.com/verification'
+      title: 'Learn C++ Programming - Beginner to Advance',
+      issuer: 'Udemy',
+      date: 'Issued Mar 2026',
+      id: 'UC-2e677c05-b295-4558-bd1a-2e8695e36a7c',
+      verifyUrl: 'https://ude.my/UC-2e677c05-b295-4558-bd1a-2e8695e36a7c',
+      image: '/cert-udemy.png'
     },
     {
-      title: 'MongoDB Certified Developer Associate',
-      issuer: 'MongoDB University',
-      date: 'Issued Aug 2024',
-      id: 'MDB-CD-88231',
-      verifyUrl: 'https://mongodb.com/academy'
+      title: 'AI and Cybersecurity Awareness',
+      issuer: 'TCS iON',
+      date: 'Issued Jun 2026',
+      id: '8770-31319419-1016',
+      verifyUrl: '#',
+      image: '/cert-tcs.png'
     },
     {
-      title: 'Meta Advanced React Professional Certificate',
-      issuer: 'Meta (via Coursera)',
-      date: 'Issued Mar 2024',
-      id: 'META-RX-77291',
-      verifyUrl: 'https://coursera.org/verify'
-    },
-    {
-      title: 'Professional Scrum Master I (PSM I)',
-      issuer: 'Scrum.org',
-      date: 'Issued Jan 2024',
-      id: 'SCRUM-PSM1-2291',
-      verifyUrl: 'https://scrum.org/credentials'
+      title: 'WEBATHON 2K26 Participation',
+      issuer: 'GNIOT CSE Tech Club',
+      date: 'Issued Apr 2026',
+      id: 'GNIOT/CSE/TechClub/WB/2028',
+      verifyUrl: '#',
+      image: '/cert-gniot.png'
     }
   ];
 
@@ -94,6 +90,24 @@ export default function Certifications() {
                 filter: 'blur(8px)'
               }} />
 
+              {/* Certificate Image */}
+              <div style={{
+                width: '100%',
+                height: '180px',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                marginBottom: '20px',
+                border: '1px solid var(--border-color)',
+                position: 'relative',
+                background: 'var(--bg-base)'
+              }}>
+                <img 
+                  src={cert.image} 
+                  alt={cert.title} 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                />
+              </div>
+
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -140,25 +154,27 @@ export default function Certifications() {
                 </span>
               </div>
 
-              <a 
-                href={cert.verifyUrl} 
-                target="_blank" 
-                rel="noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  color: 'hsl(var(--color-primary-hsl))',
-                  textDecoration: 'none',
-                  marginTop: 'auto'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--color-secondary-hsl))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--color-primary-hsl))'}
-              >
-                Verify Credential <ExternalLink size={12} />
-              </a>
+              {cert.verifyUrl !== '#' && (
+                <a 
+                  href={cert.verifyUrl} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    color: 'hsl(var(--color-primary-hsl))',
+                    textDecoration: 'none',
+                    marginTop: 'auto'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--color-secondary-hsl))'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--color-primary-hsl))'}
+                >
+                  Verify Credential <ExternalLink size={12} />
+                </a>
+              )}
             </div>
           ))}
         </div>

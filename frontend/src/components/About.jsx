@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Cpu, Shield, Zap, Heart } from 'lucide-react';
+import { User, Cpu, Shield, Zap } from 'lucide-react';
 
 export default function About() {
   const pillars = [
@@ -22,9 +22,9 @@ export default function About() {
 
   const infoItems = [
     { label: 'Role', value: 'Full Stack Engineer' },
-    { label: 'Location', value: 'India, Gurugram (Open to Remote)' },
+    { label: 'Location', value: 'Gurugram, India (Open to Remote)' },
     { label: 'Primary Stack', value: 'React, Node.js, Express, MongoDB' },
-    { label: 'Interests', value: 'Generative AI, Web3D, Tech Writing, Chess' }
+    { label: 'Interests', value: 'Generative AI, Open Source, Chess' }
   ];
 
   return (
@@ -116,10 +116,10 @@ export default function About() {
                 Crafting robust applications with premium design aesthetics.
               </h3>
               <p style={{ color: 'var(--text-muted)', marginBottom: '16px', fontSize: '1rem' }}>
-                I am a passionate software engineer with a background in design. Over the past 5 years, I've worked with startups and enterprises to launch highly interactive applications. I specialize in the JavaScript ecosystem, focusing on React on the frontend and Node/Express on the backend.
+                I am a passionate software engineer with a background in design. Over the past few years, I've worked to build highly interactive applications. I specialize in the JavaScript ecosystem, focusing on React on the frontend and Node/Express on the backend.
               </p>
               <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
-                I believe coding is an art form. Writing clean, maintainable, and self-documenting code is just as important as producing a premium UI. I am constantly learning new technologies (such as Web3D and serverless backends) to solve complex user challenges.
+                I believe coding is an art form. Writing clean, maintainable, and self-documenting code is just as important as producing a premium UI. I am constantly learning new technologies to solve complex user challenges.
               </p>
             </div>
 

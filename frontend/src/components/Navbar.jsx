@@ -10,12 +10,12 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
+    { name: 'Education', id: 'education' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
-    { name: 'Timeline', id: 'timeline' },
     { name: 'Certifications', id: 'certifications' },
-    { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Blog', id: 'blog' },
+    { name: 'Achievements', id: 'achievements' },
+    { name: 'Resume', id: 'resume' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -52,7 +52,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navLinks]);
 
   const handleNavClick = (id) => {
     setIsMobileOpen(false);
@@ -131,7 +131,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             style={{ 
               display: 'flex', 
               listStyle: 'none', 
-              gap: '24px', 
+              gap: '16px', 
               alignItems: 'center' 
             }}
             className="desktop-menu"
@@ -143,7 +143,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                   style={{
                     background: 'none',
                     border: 'none',
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     fontWeight: 500,
                     cursor: 'pointer',
                     color: activeSection === link.id ? 'hsl(var(--color-primary-hsl))' : 'var(--text-muted)',

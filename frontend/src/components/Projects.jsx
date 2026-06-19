@@ -17,82 +17,30 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Zenith SaaS Analytics Dashboard',
+      title: 'Lazarev Frontend Clone',
       category: 'frontend',
-      tags: ['React.js', 'Vite', 'CSS Grid', 'ChartJS'],
-      desc: 'A premium analytics platform tracking software-as-a-service KPIs, load factors, and subscription MRR.',
-      detailedDesc: 'Zenith is a complete analytics interface designed for modern SaaS executives. It renders real-time active user telemetry, cloud resource allocation, and payment history using high-performance Chart.js graphs. It implements advanced glassmorphism grids and responsive dashboards that support extreme resolutions.',
-      challenge: 'Rendering dozens of charts concurrently without impacting browser frame rates (FPS) on lower-end mobile devices.',
-      solution: 'Implemented component-level lazy loading, chart rendering delay offsets, and debounced resize handlers.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://zenith-analytics.56789.xyz',
-      githubLink: 'https://github.56789.xyz/zenith-dashboard'
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      desc: 'Recreated a visually rich, animated frontend project with smooth scroll animations and interactive UI elements.',
+      detailedDesc: 'Focused on pixel-perfect responsive layout and CSS transitions.',
+      challenge: 'Replicating complex scroll animations and layouts from the original site.',
+      solution: 'Used advanced CSS and JavaScript event listeners for scroll effects.',
+      image: '/project-lazarev.png',
+      demoLink: 'https://lazarev-peach.vercel.app',
+      githubLink: 'https://github.com/sainigaurav59335-ship-it/lazarev'
     },
     {
       id: 2,
-      title: 'Nova E-Commerce Engine',
-      category: 'full-stack',
-      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-      desc: 'High-performance checkout engine with real-time stock sync and admin inventory controls.',
-      detailedDesc: 'Nova is a modern full-stack e-commerce marketplace featuring product search filters, cart caching, Stripe checkout validation, and a full-featured admin portal. Admins can upload items, track pending transactions, and update inventory counters.',
-      challenge: 'Handling race conditions during sudden concurrent checkout requests for identical inventory items.',
-      solution: 'Utilized database transaction locks and mongoose pre-save triggers to guarantee inventory consistency.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://nova-shop.56789.xyz',
-      githubLink: 'https://github.56789.xyz/nova-ecommerce'
-    },
-    {
-      id: 3,
-      title: 'Aether Interactive 3D Portfolio',
+      title: 'Veloze Shoe Store UI',
       category: 'ui/ux',
-      tags: ['Three.js', 'React Three Fiber', 'GSAP'],
-      desc: 'Immersive 3D virtual showroom utilizing physics-based models and scroll-driven camera paths.',
-      detailedDesc: 'Aether is an experimental web application showcasing spatial UI. By using three.js and React Three Fiber, users can explore a virtual catalog by orbiting objects, changing lighting, and scrolling through guided camera paths synchronized by GSAP.',
-      challenge: 'Optimizing high-polygon 3D models to load under 3 seconds on standard cellular connections.',
-      solution: 'Compressed assets using Draco compression algorithms and baked lighting into textures, reducing total size by 85%.',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://aether-3d.56789.xyz',
-      githubLink: 'https://github.56789.xyz/aether-3d'
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      desc: 'A modern, minimalist e-commerce shoe store interface with clean typography and layout.',
+      detailedDesc: 'Built to demonstrate clean UI/UX principles, featuring a modern product showcase and a responsive layout.',
+      challenge: 'Designing a clean and modern aesthetic that looks premium.',
+      solution: 'Used minimalist design principles and typography-focused layouts.',
+      image: '/project-webproject1.png',
+      demoLink: 'https://webproject1-peach.vercel.app',
+      githubLink: 'https://github.com/sainigaurav59335-ship-it/webproject1'
     },
-    {
-      id: 4,
-      title: 'Echo Secure Chat Application',
-      category: 'full-stack',
-      tags: ['React', 'WebSockets', 'Node.js', 'Redis'],
-      desc: 'Instant messaging app featuring message history caching and presence status updates.',
-      detailedDesc: 'Echo is a real-time messaging application. Messages are delivered instantly over full-duplex WebSocket connections. Message states are cached in a Redis store for fast delivery and synced with MongoDB for permanent storage.',
-      challenge: 'Synchronizing user online/offline status signals across multiple load-balanced server instances.',
-      solution: 'Configured a Redis pub/sub mechanism to broadcast presence signals across instances.',
-      image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://echo-chat.56789.xyz',
-      githubLink: 'https://github.56789.xyz/echo-app'
-    },
-    {
-      id: 5,
-      title: 'Apex In-Browser Code Sandbox',
-      category: 'frontend',
-      tags: ['React.js', 'Monaco Editor', 'WebAssembly'],
-      desc: 'Online developer playground with automatic syntax compilers and isolated code runners.',
-      detailedDesc: 'Apex is a client-side environment that compiles HTML, CSS, and JS files on-the-fly. Users write code using Microsoft Monaco Editor and view the compiled output inside a sandboxed frame.',
-      challenge: 'Preventing malicious user scripts from accessing parent cookies or executing redirect attacks.',
-      solution: 'Loaded execution frames under strict sandboxed iframe attributes and separate origins.',
-      image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://apex-editor.56789.xyz',
-      githubLink: 'https://github.56789.xyz/apex-sandbox'
-    },
-    {
-      id: 6,
-      title: 'Vortex Crypto Asset Tracker',
-      category: 'ui/ux',
-      tags: ['Figma', 'React.js', 'Tailwind', 'REST APIs'],
-      desc: 'Clean cryptocurrency price tracker with customizable watchlist alerts.',
-      detailedDesc: 'Vortex displays price tickers, market cap rankings, and candlestick history for the top 200 crypto assets. Users can customize a local portfolio watchlist and receive sound notifications when trigger thresholds are reached.',
-      challenge: 'Handling API rate limits when updating 200 items in real-time under high traffic conditions.',
-      solution: 'Batched requests and configured local storage poll offsets to throttle redundant API queries.',
-      image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80',
-      demoLink: 'https://vortex-tracker.56789.xyz',
-      githubLink: 'https://github.56789.xyz/vortex-tracker'
-    }
   ];
 
   const filteredProjects = selectedCategory === 'all'

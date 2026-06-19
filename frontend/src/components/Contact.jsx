@@ -67,7 +67,7 @@ export default function Contact() {
           particleCount: 120,
           spread: 80,
           origin: { y: 0.6 },
-          colors: ['#6366f1', '#8b5cf6', '#10b981']
+          colors: ['#00F0FF', '#2196F3', '#10B981']
         });
       } else {
         setStatus('error');
@@ -127,9 +127,9 @@ export default function Contact() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {[
-                { icon: <Mail size={20} />, label: 'Email', value: 'alex@morgan.dev', link: 'mailto:alex@morgan.dev' },
-                { icon: <Phone size={20} />, label: 'Phone', value: '+1 (415) 555-0199', link: 'tel:+14155550199' },
-                { icon: <MapPin size={20} />, label: 'Location', value: 'India, Gurugram (Open to Remote)', link: null }
+                { icon: <Mail size={20} />, label: 'Email', value: 'sainigaurav59335@gmail.com', link: 'mailto:sainigaurav59335@gmail.com' },
+                { icon: <Phone size={20} />, label: 'Phone', value: '+91 95990 XXXXX', link: 'tel:+9195990XXXXX' },
+                { icon: <MapPin size={20} />, label: 'Location', value: 'Gurugram, India', link: null }
               ].map((item, idx) => (
                 <div 
                   key={idx}

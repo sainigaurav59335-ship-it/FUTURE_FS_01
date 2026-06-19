@@ -16,12 +16,6 @@ const LinkedinIcon = (props) => (
   </svg>
 );
 
-const TwitterIcon = (props) => (
-  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-  </svg>
-);
-
 export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -47,9 +41,12 @@ export default function Footer() {
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
+    { name: 'Education', id: 'education' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
-    { name: 'Timeline', id: 'timeline' },
+    { name: 'Certifications', id: 'certifications' },
+    { name: 'Achievements', id: 'achievements' },
+    { name: 'Resume', id: 'resume' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -140,9 +137,8 @@ export default function Footer() {
         {/* Social Icons */}
         <div style={{ display: 'flex', gap: '16px' }}>
           {[
-            { icon: <GithubIcon />, url: 'https://github.56789.xyz' },
-            { icon: <LinkedinIcon />, url: 'https://linkedin.56789.xyz' },
-            { icon: <TwitterIcon />, url: 'https://twitter.56789.xyz' },
+            { icon: <GithubIcon />, url: 'https://github.com/sainigaurav59335-ship-it' },
+            { icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/gaurav-saini-2278bb336/' },
           ].map((item, idx) => (
             <a
               key={idx}
@@ -199,7 +195,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Gaurav Saini. All rights reserved.
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', justifyContent: 'center' }}>
-            Built with React & Node.js <Heart size={12} fill="red" color="red" />
+            Built with React <Heart size={12} fill="hsl(var(--color-primary-hsl))" color="hsl(var(--color-primary-hsl))" />
           </div>
         </div>
       </div>

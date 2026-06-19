@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Timeline from './components/Timeline';
 import Certifications from './components/Certifications';
-import Testimonials from './components/Testimonials';
-import Blog from './components/Blog';
+import Achievements from './components/Achievements';
+import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -66,6 +66,10 @@ export default function App() {
       </div>
 
       <div className="reveal-section reveal">
+        <Education />
+      </div>
+
+      <div className="reveal-section reveal">
         <Skills />
       </div>
 
@@ -74,19 +78,15 @@ export default function App() {
       </div>
 
       <div className="reveal-section reveal">
-        <Timeline />
-      </div>
-
-      <div className="reveal-section reveal">
         <Certifications />
       </div>
 
       <div className="reveal-section reveal">
-        <Testimonials />
+        <Achievements />
       </div>
 
       <div className="reveal-section reveal">
-        <Blog />
+        <Resume />
       </div>
 
       <div className="reveal-section reveal">
